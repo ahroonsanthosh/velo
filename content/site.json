@@ -1,0 +1,123 @@
+{
+  "_readme": "Edit this file to change hours, prices, or contact details. No code needed. Save, commit, push — the site rebuilds automatically. Prices are strings so you can include the euro sign exactly as you want it displayed.",
+
+  "business": {
+    "name": "Café Velo",
+    "wordmark": "CAFÉ VELO",
+    "tagline": "Breakfast & lunch, Carrigaline",
+    "descriptor": "A cycling-themed cafe on the Carrigaline main road — sun-warmed courtyard tables, green shopfront, long hours either side of the weekend.",
+    "phone": "(021) 484 8111",
+    "phoneHref": "tel:+353214848111",
+    "email": "",
+    "priceRange": "€€",
+    "cuisine": ["Cafe", "Breakfast", "Brunch", "Bakery"],
+    "address": {
+      "line1": "Owenabue Mall, Unit 3",
+      "line2": "Carrigaline Middle",
+      "town": "Carrigaline",
+      "county": "Co. Cork",
+      "postcode": "P43 A395",
+      "country": "IE",
+      "mapQuery": "Caf%C3%A9+Velo+Owenabue+Mall+Carrigaline"
+    },
+    "geo": { "lat": 51.8125, "lng": -8.3813 },
+    "socials": {
+      "instagram": { "handle": "@cafe_velo_carrigaline", "url": "https://www.instagram.com/cafe_velo_carrigaline/" },
+      "facebook": { "handle": "Café Velo", "url": "https://www.facebook.com/" }
+    }
+  },
+
+  "hours": {
+    "note": "No booking system — walk in, or ring ahead if you're bringing a crowd.",
+    "schedule": [
+      { "day": "Monday",    "key": "mon", "open": "08:30", "close": "15:00", "label": "8:30am – 3pm" },
+      { "day": "Tuesday",   "key": "tue", "open": "08:30", "close": "15:00", "label": "8:30am – 3pm" },
+      { "day": "Wednesday", "key": "wed", "open": "08:30", "close": "15:00", "label": "8:30am – 3pm" },
+      { "day": "Thursday",  "key": "thu", "open": "08:30", "close": "15:00", "label": "8:30am – 3pm" },
+      { "day": "Friday",    "key": "fri", "open": "08:30", "close": "21:30", "label": "8:30am – 9:30pm", "highlight": true },
+      { "day": "Saturday",  "key": "sat", "open": "08:30", "close": "19:00", "label": "8:30am – 7pm", "highlight": true },
+      { "day": "Sunday",    "key": "sun", "open": "08:30", "close": "19:00", "label": "8:30am – 7pm", "highlight": true }
+    ]
+  },
+
+  "differentiators": [
+    {
+      "title": "Velo, as in bicycle",
+      "body": "Named for the bike, not the beans. Cycling prints on the wall, a wheel on the sign — the kind of cafe you'd find two villages over in the Vaucluse, dropped onto the Carrigaline main road."
+    },
+    {
+      "title": "Open when a cafe usually isn't",
+      "body": "Most places on this road pull the shutters at 3. We're still pouring at half nine on a Friday, and both weekend mornings run the full day — 8:30am to 7pm, no early close."
+    },
+    {
+      "title": "Green door, olive trees, no chain in sight",
+      "body": "Navy fascia, sage-green pillars, two olive trees either side of the door. It reads more Aix-en-Provence diner than high-street coffee chain, because that's exactly what we built it to be."
+    }
+  ],
+
+  "menu": {
+    "note": "The board changes with what's fresh out of the oven — this is the short list. Full allergen menu and daily specials are on the counter.",
+    "categories": [
+      {
+        "id": "breakfast",
+        "name": "Breakfast",
+        "eyebrow": "All day, every day we're open",
+        "blurb": "Eggs any way you like them, on sourdough, with roast potato on the side if you ask nicely.",
+        "image": "breakfast-overhead",
+        "items": [
+          { "name": "Full Velo B'fast", "price": "€15.00", "desc": "Egg of your choice, 2 oak-smoked rashers, 2 Jack McCarthy sausages, black pudding, white pudding, hash brown, beans, roast tomato & toast.", "allergens": "1,3,6,7,12" },
+          { "name": "Velo Chorizo Hash", "price": "€14.50", "desc": "Crispy chorizo, sautéed potatoes & parsley, topped with 2 fried eggs.", "allergens": "1,3,6,7,12" },
+          { "name": "Egg Royal", "price": "€13.95", "desc": "Bagel or sourdough with smoked Atlantic salmon, topped with homemade hollandaise.", "allergens": "1,3,4,6,7,12" },
+          { "name": "Eggs Benedict", "price": "€12.50", "desc": "Bagel or sourdough, 2 oak-smoked rashers, poached eggs, homemade hollandaise.", "allergens": "1,3,6,7,12", "thumb": "benedict-thumb" },
+          { "name": "Smashed Avocado", "price": "€13.95", "desc": "Poached egg and our own guacamole on bagel or sourdough.", "allergens": "1,3,6,7,12" },
+          { "name": "Full Vege Breakfast", "price": "€15.00", "desc": "Egg of your choice, hash brown, beans, avocado, mushroom, tomato, roast potato & toast.", "allergens": "1,3,6,12", "veg": true },
+          { "name": "Pulled Pork Breakfast Bagel", "price": "€12.50", "desc": "Butter, pulled pork, poached egg, hollandaise, crispy onion.", "allergens": "1,3,6,7,12" },
+          { "name": "Porridge", "price": "€8.95", "desc": "Creamy porridge with berries & honey, or hazelnut & honey.", "allergens": "1,6,7,11", "veg": true }
+        ]
+      },
+      {
+        "id": "drinks",
+        "name": "Coffee & Juice",
+        "eyebrow": "Lunch counter",
+        "blurb": "Barry's Tea to dirty chai, fresh-squeezed to kombucha.",
+        "image": "latte",
+        "items": [
+          { "name": "Flat White", "price": "€4.10", "desc": "Milk of your choice — almond, soya, coconut or oat, no upcharge drama.", "allergens": "7" },
+          { "name": "Dirty Chai", "price": "€5.20", "desc": "Chai latte with a shot pulled straight through it.", "allergens": "7,12" },
+          { "name": "Hot Chocolate", "price": "€4.20", "desc": "Dark, white or milk.", "allergens": "7,12" },
+          { "name": "Fresh Squeezed Orange Juice", "price": "€4.50", "desc": "Squeezed to order, nothing from concentrate." },
+          { "name": "Jump Mango Smoothie", "price": "€3.80", "desc": "Also in strawberry." },
+          { "name": "Kombucha Ginger & Turmeric", "price": "€3.20", "desc": "Also apple & elderflower." }
+        ]
+      },
+      {
+        "id": "desserts",
+        "name": "Desserts",
+        "eyebrow": "The cabinet by the counter",
+        "blurb": "Baked most mornings — cheesecakes, tarts, one very good brownie.",
+        "image": "detail",
+        "items": [
+          { "name": "Banoffee Pie", "price": "€7.50", "desc": "Served with cream or ice cream.", "allergens": "1,6,7,12" },
+          { "name": "White Chocolate & Raspberry Cheesecake", "price": "€7.50", "allergens": "1,7,12" },
+          { "name": "Oreo Cheesecake", "price": "€7.50", "allergens": "1,7,12" },
+          { "name": "Chocolate Fudge Cake", "price": "€6.95", "desc": "Gluten free.", "allergens": "3,7,12", "gf": true },
+          { "name": "Classic Deep Apple Tart", "price": "€6.95", "allergens": "1,3,7" },
+          { "name": "Lemon Drizzle Cake", "price": "€6.95", "desc": "Gluten free.", "allergens": "3,7", "gf": true },
+          { "name": "Carrot Cake", "price": "€5.95", "desc": "Served with cream. Gluten free.", "allergens": "1,3,7,8", "gf": true },
+          { "name": "Chocolate Brownie", "price": "€6.95", "desc": "Served with cream or ice cream.", "allergens": "1,3,6,7" },
+          { "name": "Almond Croissant", "price": "€3.00", "allergens": "1,3,7" },
+          { "name": "Pain au Chocolat", "price": "€3.00", "allergens": "1,3,6,7" }
+        ]
+      }
+    ],
+    "allergenLegend": "1) Wheat 2) Crustaceans 3) Eggs 4) Fish 5) Peanuts 6) Sulphites/Dioxide 7) Milk 8) Nuts 9) Celery 10) Mustard 11) Sesame 12) Soya 13) Lupin 14) Molluscs"
+  },
+
+  "gallery": [
+    { "image": "hero-shopfront", "alt": "Café Velo shopfront on the Carrigaline main road, navy fascia and sage-green pillars, olive trees either side of the door" },
+    { "image": "latte", "alt": "Latte with heart-shaped latte art on a wooden table beside a potted plant" },
+    { "image": "breakfast-overhead", "alt": "Full Irish breakfast on a navy plate shot from above on a wooden table" },
+    { "image": "benedict-thumb", "alt": "Eggs Benedict with smoked salmon and hollandaise, roast potatoes on the side" },
+    { "image": "burger-thumb", "alt": "Burger with lettuce, tomato and a side of fries with dipping sauces" }
+  ]
+}

@@ -1,0 +1,80 @@
+/*
+  Design tokens — Café Velo
+  Palette sampled directly from the shopfront photo (navy fascia, sage
+  pillars) and the food photography (amber from roast potatoes / hollandaise).
+  Contrast ratios verified: ink/navy on cream ≥13:1, ink on amber 4.88:1,
+  sage-700 on cream 4.93:1, navy on sage-tint 9.6:1. All AA or better.
+*/
+:root{
+  /* ---- colour: sampled + tuned for use as text/background ---- */
+  --navy-950:#1c2733;      /* fascia, deepened for text/bg use */
+  --navy-800:#26333f;
+  --navy-700:#33455a;
+  --navy-500:#4c6178;
+  --sage-700:#56704a;      /* pillar green, deepened for AA text use */
+  --sage-500:#8fa876;      /* pillar green, as sampled */
+  --sage-300:#c3d4b0;      /* pillar green, tint for backgrounds */
+  --sage-100:#e7edde;
+  --cream-50:#f7f2e7;      /* ground */
+  --cream-100:#efe6d2;     /* alternate section ground */
+  --paper:#fbf8f1;         /* near-white, for text-on-navy + cards */
+  --ink:#211a12;           /* near-black warm ink, body text */
+  --amber-500:#c1780f;     /* roast potato / hollandaise gold — CTA only */
+  --amber-600:#a8670a;
+  --amber-100:#f3e2c2;
+
+  /* ---- type ---- */
+  --font-display:"Fraunces","Iowan Old Style","Georgia",serif;
+  --font-script:"Caveat","Segoe Script",cursive;
+  --font-mono:"Space Mono","IBM Plex Mono",ui-monospace,monospace;
+
+  --tracking-tight:-0.02em;
+  --tracking-wide:0.08em;
+  --tracking-wider:0.16em;
+
+  /* modular scale */
+  --step--1: clamp(0.83rem, 0.8rem + 0.1vw, 0.9rem);
+  --step-0:  clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+  --step-1:  clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
+  --step-2:  clamp(1.6rem, 1.4rem + 1vw, 2.1rem);
+  --step-3:  clamp(2.1rem, 1.7rem + 2vw, 3.2rem);
+  --step-4:  clamp(2.8rem, 2.1rem + 3.5vw, 4.6rem);
+  --step-5:  clamp(3.4rem, 2.3rem + 5.5vw, 6.4rem);
+
+  /* ---- space: base unit 4px, powers used throughout ---- */
+  --sp-1:0.25rem;
+  --sp-2:0.5rem;
+  --sp-3:0.75rem;
+  --sp-4:1rem;
+  --sp-5:1.5rem;
+  --sp-6:2rem;
+  --sp-7:3rem;
+  --sp-8:4rem;
+  --sp-9:6rem;
+  --sp-10:8rem;
+
+  /* ---- motion ---- */
+  --ease-entrance: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-exit: cubic-bezier(0.4, 0, 1, 1);
+  --ease-interact: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --dur-micro:160ms;
+  --dur-entrance:650ms;
+
+  /* ---- misc ---- */
+  --radius-sm:6px;
+  --radius-md:14px;
+  --container-max:1220px;
+  --dock-h:64px;
+  --dock-safe: calc(var(--dock-h) + env(safe-area-inset-bottom, 0px) + 20px);
+}
+
+@media (prefers-color-scheme:dark){
+  /* Café Velo is a daylight, sun-warmed brand — we keep one deliberate
+     light-ground identity rather than a fully inverted dark theme, but we
+     still deepen the ground slightly so OLED users aren't hit with a flash
+     of pure paper white. */
+  :root{
+    --cream-50:#efe7d8;
+    --cream-100:#e6dcc7;
+  }
+}
