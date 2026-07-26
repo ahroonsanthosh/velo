@@ -1,0 +1,5 @@
+GSAP (including ScrollTrigger) v3.15.0
+Standard "no charge" license — free for commercial use, including on
+client and personal sites, since GSAP 3.13 (all bonus plugins, including
+ScrollTrigger, became free for everyone; no Club GreenSock membership
+required). Full terms: https://gsap.com/standard-license.

@@ -30,9 +30,27 @@ Examples:
 `dist/` folder (HTML + CSS inlined + JS + images + fonts). There is no
 client-side fetch of the content file — everything is baked into the HTML
 at build time, so the page is readable and correct with JavaScript
-disabled. JavaScript (`assets/js/main.js`) only adds the live open/closed
-state, scroll reveals, the menu accordion, and the bicycle-wheel easter egg
-— all progressive enhancement.
+disabled.
+
+`assets/js/main.js` runs in two phases:
+
+- **Phase A** (immediate, zero dependencies): the preloader, hero reveal,
+  header/mobile nav, menu accordion, live open/closed hours, scroll
+  reveals, and the bicycle-wheel physics drop are all plain JS + CSS. This
+  is the entire experience if a script fails to load or the network is
+  slow — nothing critical depends on Phase B.
+- **Phase B** (lazy-loaded after the page has already loaded): GSAP,
+  ScrollTrigger, and Lenis are fetched and initialized only once the
+  browser is idle post-load, then layer in the scroll-linked flourishes —
+  smooth scrolling, the pinned ingredient cycler, the pinned horizontal
+  gallery, marquee direction-inversion, hero parallax, and the footer
+  badge's scroll-linked rotation. Deferring this keeps it off the critical
+  rendering path (verified: Lighthouse mobile Performance stays ≥90 with
+  it in place).
+
+Matter.js (the wheel-drop physics) is fetched separately, only on the
+first click of the "click to drop wheels" control — most visitors never
+trigger it, so it costs nothing until asked for.
 
 To build locally:
 
@@ -55,7 +73,9 @@ assets/img/processed/      — cropped/optimized WebP + AVIF derivatives,
                              the logo trace, favicons, and the OG image
 assets/fonts/              — self-hosted Fraunces / Caveat / Space Mono
 assets/css/style.css       — all styles (inlined into <head> at build time)
-assets/js/main.js          — motion + interaction, no dependencies
+assets/js/main.js          — two-phase motion + interaction (see above)
+assets/js/vendor/          — self-hosted GSAP, ScrollTrigger, Lenis, Matter.js
+                             (lazy-loaded, not part of the critical path)
 .github/workflows/deploy.yml — builds and deploys to Pages on push to main
 ```
 
